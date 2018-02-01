@@ -13,8 +13,7 @@ export class RegisterComponent implements OnInit {
   user: User = {
     username: '',
     password: '',
-    email: '',
-    full_name: ''
+    email: ''
   };
 
   constructor(private mediaService: MediaService) { }
@@ -27,7 +26,7 @@ export class RegisterComponent implements OnInit {
         this.mediaService.password = this.user.password;
         this.mediaService.login();
       }, (error: HttpErrorResponse) => {
-        console.log(error);
+        console.log(error.error.message);
       });
   }
 

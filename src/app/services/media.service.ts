@@ -35,8 +35,7 @@ export class MediaService {
 
   register(user) {
     // do something here
-    console.log('uname: ' + this.username);
-    console.log('pwd: ' + this.password);
+    console.log(user);
     return this.http.post(this.apiUrl + '/users', user);
   }
 

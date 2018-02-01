@@ -1,15 +1,26 @@
-<p>
-  register works!
-</p>
-<!-- ======================================= -->
-<form (submit)="register()">
-  <input [ngModel]="this.user.username" placeholder="Username" name="user">
+
+<!-- <form (submit)="register()">
+  <input [(ngModel)]="this.user.username" placeholder="Username" name="user">
   <br>
-  <input [ngModel]="this.user.password" placeholder="Password" name="pass">
+  <input [(ngModel)]="this.user.password" placeholder="Password" name="pass">
   <br>
-  <input [ngModel]="this.user.email" placeholder="Email" name="email">
+  <input [(ngModel)]="this.user.email" placeholder="Email" name="email">
   <br>
-  <input [ngModel]="this.user.full_name" placeholder="Full name" name="fname">
+  <input [(ngModel)]="this.user.full_name" placeholder="Full name" name="fname">
   <br>
   <button type="submit">Register</button>
-</form>
+</form> -->
+
+
+<form (submit)="register()">
+    <input [(ngModel)] = "user.username" placeholder="username" name="username">
+    <br>
+    <input [(ngModel)] = "user.email" placeholder="email" type="email" name="email">
+    <br>
+    <input [(ngModel)] = "user.password" placeholder="password" type="password" name="password">
+    <br>
+    <!-- <input [(ngModel)] = "user.full_name" placeholder="full name" name="fullName">
+    <br> -->
+    <button type="submit">Register</button>
+  </form>
+  {{ mediaService.status }}
