@@ -1,3 +1,15 @@
 <p>
   register works!
 </p>
+<!-- ======================================= -->
+<form (submit)="register()">
+  <input [ngModel]="this.user.username" placeholder="Username" name="user">
+  <br>
+  <input [ngModel]="this.user.password" placeholder="Password" name="pass">
+  <br>
+  <input [ngModel]="this.user.email" placeholder="Email" name="email">
+  <br>
+  <input [ngModel]="this.user.full_name" placeholder="Full name" name="fname">
+  <br>
+  <button type="submit">Register</button>
+</form>
