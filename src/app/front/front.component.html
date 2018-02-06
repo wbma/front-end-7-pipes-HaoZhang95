@@ -1,1 +1,6 @@
-<div>Display this content when logged in.</div>
+
+<div *ngFor="let file of files">
+  <img [alt]="file?.title" [src]="this.mediaService.mediaUrl + (file?.filename | thumbnail: 'small')">
+  <span>{{file?.title}}</span>
+  <!-- should transform: SOMEIMAGE.jpg => SOMEIMAGE-tn160.png -->
+</div>
