@@ -13,7 +13,9 @@ export class ThumbnailPipe implements PipeTransform {
       large: '-tn640.png',
     };
 
-    return (args === '' ? value.split('.')[0] + defaultSize : value.split('.')[0] + sizes[args]);
+    return (args ?
+      ( (args in sizes) ? value.split('.')[0] + sizes[args] : value.split('.')[0] + defaultSize )
+      : value.split('.')[0] + defaultSize);
   }
 
 }
